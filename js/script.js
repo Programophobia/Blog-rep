@@ -1,0 +1,1 @@
+const yo = document.querySelectorAll('.')
