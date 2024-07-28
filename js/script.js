@@ -14,7 +14,7 @@ function argo (event){
    for(let mateusz of lol){
     mateusz.classList.remove('active')
    }
-   const mateuszek = document.getElementById(href)
+   const mateuszek = document.querySelector(href)
 mateuszek.classList.add('active')
 }
 
