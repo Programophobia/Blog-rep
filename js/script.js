@@ -23,3 +23,20 @@ const  yo = document.querySelectorAll('.titles a')
 for(let y of yo){
     y.addEventListener('click', argo)
 }
+let h = ''
+const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles';
+  function elfDobryJakPomidor(){
+  optTitleSelector.innerHTML = ""
+
+  for(let a of optArticleSelector){
+    const kek = a.getAttribute('id')
+  }
+   const tilt = optTitleSelector.innerHTML
+    
+ 
+    const insert = '<li><a href="#' + kek + '"><span>' + tilt + '</span></a></li>';
+    h += insert
+ }
+elfDobryJakPomidor();
