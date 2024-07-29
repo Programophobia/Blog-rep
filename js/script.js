@@ -34,17 +34,16 @@ const optArticleSelector = '.post',
     for(let a of aaa){
       const kek = a.getAttribute('id')
   
-   const tilt = a.querySelector(optTitleSelector).innerHTML
-    
- 
-    const insert = '<li><a href="#' + kek + '"><span>' + tilt + '</span></a></li>';
-    h += insert
+      const tilt = a.querySelector(optTitleSelector).innerHTML
+      const insert = '<li><a href="#' + kek + '"><span>' + tilt + '</span></a></li>';
+      h += insert
     }
+
     j.innerHTML = h;
     const  yo = document.querySelectorAll('.titles a')
-for(let y of yo){
-    y.addEventListener('click', argo)
-}
+    for(let y of yo){
+       y.addEventListener('click', argo)
+    }
  }
 
 elfDobryJakPomidor();
