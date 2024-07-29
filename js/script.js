@@ -19,24 +19,32 @@ function argo (event){
 }
 
 
-const  yo = document.querySelectorAll('.titles a')
-for(let y of yo){
-    y.addEventListener('click', argo)
-}
-let h = ''
+
+
 const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles';
-  function elfDobryJakPomidor(){
-  optTitleSelector.innerHTML = ""
 
-  for(let a of optArticleSelector){
-    const kek = a.getAttribute('id')
-  }
-   const tilt = optTitleSelector.innerHTML
+  function elfDobryJakPomidor(){
+    const j = document.querySelector(optTitleListSelector)
+   
+    j.innerHTML = ""
+    let h = ''
+    const aaa = document.querySelectorAll(optArticleSelector)
+    for(let a of aaa){
+      const kek = a.getAttribute('id')
+  
+   const tilt = a.querySelector(optTitleSelector).innerHTML
     
  
     const insert = '<li><a href="#' + kek + '"><span>' + tilt + '</span></a></li>';
     h += insert
+    }
+    j.innerHTML = h;
+    const  yo = document.querySelectorAll('.titles a')
+for(let y of yo){
+    y.addEventListener('click', argo)
+}
  }
+
 elfDobryJakPomidor();
