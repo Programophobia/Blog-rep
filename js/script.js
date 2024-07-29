@@ -10,12 +10,12 @@ function argo (event){
         p.classList.remove('active')
     }
     clickedEl.classList.add('active')
-   const href = clickedEl.getAttribute('href')
-   for(let mateusz of lol){
-    mateusz.classList.remove('active')
+    const href = clickedEl.getAttribute('href')
+    for(let mateusz of lol){
+       mateusz.classList.remove('active')
    }
    const mateuszek = document.querySelector(href)
-mateuszek.classList.add('active')
+   mateuszek.classList.add('active')
 }
 
 
