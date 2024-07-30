@@ -57,16 +57,15 @@ function gelolo(){
       const tagss =  cfc.querySelector(jjjj)
         let ggg = ''
         const tagAtt = tagss.getAttribute('data-tags');
+        const split = tagAtt.split(' ')
+        for(let tagOne of split){
+            const linkHTML = '<li><a href="#tag-' + tagOne + '"><span>' + tagOne + '</span></a></li><br>';
+        ggg += linkHTML
+        }
+        allArt.innerHTML = ggg
     }
  
-    
-    
-    /* lolo into array */
-    /* START LOOP: for each tag */
-      /* generate HTML of the link */
-      /* add generated code to html variable */
-    /* END LOOP: for each tag */
-    /* insert HTML of all the links intlolo wrapper */
-  /* END LOOP: for every article: */
+ 
+  
 }
 gelolo();
