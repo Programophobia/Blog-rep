@@ -24,7 +24,7 @@ function argo (event){
 const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles';
-  optArticleTagsSelector = '.post-tags .list'
+  jjjj = '.post-tags .list'
 
   function elfDobryJakPomidor(){
     const j = document.querySelector(optTitleListSelector)
@@ -51,12 +51,16 @@ elfDobryJakPomidor();
 
 
 function gelolo(){
-    /* find all articles */
-    const 
-    /* START LOOP: for every article: *
-    /*lolo wrapper */
-    /* make html variable with empty string */
-    /lolo fromlolo attribute */
+  
+    const allArt = document.querySelectorAll(optArticleSelector);
+    for(let cfc of allArt){
+      const tagss =  cfc.querySelector(jjjj)
+        let ggg = ''
+        const tagAtt = tagss.getAttribute('data-tags');
+    }
+ 
+    
+    
     /* lolo into array */
     /* START LOOP: for each tag */
       /* generate HTML of the link */
