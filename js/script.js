@@ -24,6 +24,7 @@ function argo (event){
 const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles';
+  optArticleTagsSelector = '.post-tags .list'
 
   function elfDobryJakPomidor(){
     const j = document.querySelector(optTitleListSelector)
@@ -47,3 +48,21 @@ const optArticleSelector = '.post',
  }
 
 elfDobryJakPomidor();
+
+
+function gelolo(){
+    /* find all articles */
+    const 
+    /* START LOOP: for every article: *
+    /*lolo wrapper */
+    /* make html variable with empty string */
+    /lolo fromlolo attribute */
+    /* lolo into array */
+    /* START LOOP: for each tag */
+      /* generate HTML of the link */
+      /* add generated code to html variable */
+    /* END LOOP: for each tag */
+    /* insert HTML of all the links intlolo wrapper */
+  /* END LOOP: for every article: */
+}
+gelolo();
