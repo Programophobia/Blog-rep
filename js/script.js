@@ -24,7 +24,7 @@ function argo (event){
 const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles';
-  jjjj = '.post-tags .list'
+  optArticleTagsSelector = '.post-tags .list';
 
   function elfDobryJakPomidor(){
     const j = document.querySelector(optTitleListSelector)
@@ -53,19 +53,24 @@ elfDobryJakPomidor();
 function gelolo(){
   
     const allArt = document.querySelectorAll(optArticleSelector);
+    const o = '.post-tags .list';
     for(let cfc of allArt){
-      const tagss =  cfc.querySelector(jjjj)
-        let ggg = ''
-        const tagAtt = tagss.getAttribute('data-tags');
-        const split = tagAtt.split(' ')
-        for(let tagOne of split){
+      const tagss =  cfc.querySelector(o)
+        let ggg = '';
+       // const articleTags = article.getAttribute('data-tags');
+        const tagAtt = cfc.getAttribute('data-tags');
+        console.log(tagAtt)
+        const splitt = tagAtt.split(' ')
+
+        for(let tagOne of splitt){
             const linkHTML = '<li><a href="#tag-' + tagOne + '"><span>' + tagOne + '</span></a></li><br>';
-        ggg += linkHTML
+          ggg = ggg + linkHTML
+        console.log(ggg)
+       // tagss.innerHTML = ggg
+        tagss.insertAdjacentHTML('afterbegin', ggg);
         }
-        allArt.innerHTML = ggg
-    }
- 
- 
-  
+     
+       
+    } 
 }
 gelolo();
