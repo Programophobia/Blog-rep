@@ -140,26 +140,26 @@ function caelid(event){
     const mikela = morg.replace('#author-', '')
     console.log(mikela)
     
-  const dragons = document.querySelectorAll('a.active[href^="#author"]')
+  const dragons = document.querySelectorAll('a.active[href^="#author-"]')
   
   for(let aeyzykiel of dragons){
     aeyzykiel.classList.remove('active')
   }
  
-const mamaA = document.querySelectorAll('a[href="' + mikela +'" ]')
+const mamaA = document.querySelectorAll('a[href="' + morg +'" ]')
  
   for(let golebie of mamaA){
     golebie.classList.add('active')
   }
  
-elfDobryJakPomidor('[data-author~="' + mikela + '"]');
+elfDobryJakPomidor('[data-author="' + mikela + '"]');
  }
 
 
  function cukier(){
     const anka = document.querySelectorAll('a[href^="#author-"]')
     for(let dww of anka){
-      dwwaddEventListener('click', caelid)
+      dww.addEventListener('click', caelid)
   }
  }
  cukier()
