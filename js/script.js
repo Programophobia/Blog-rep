@@ -26,12 +26,14 @@ const optArticleSelector = '.post',
   optTitleListSelector = '.titles';
   optArticleTagsSelector = '.post-tags .list';
 
-  function elfDobryJakPomidor(){
+  function elfDobryJakPomidor(customSelector = ''){
     const j = document.querySelector(optTitleListSelector)
    
     j.innerHTML = ""
     let h = ''
-    const aaa = document.querySelectorAll(optArticleSelector)
+    const aaa = document.querySelectorAll(optArticleSelector + customSelector) //it works..why???? klasyczny przyklad. 5 minuts later, a dobra juz kumam
+       console.log(customSelector)
+       console.log(customSelector + optArticleSelector)
     for(let a of aaa){
       const kek = a.getAttribute('id')
   
@@ -74,3 +76,40 @@ function gelolo(){
     } 
 }
 gelolo();
+
+
+
+function tagClickHandler(event){
+
+  event.preventDefault()
+
+    const kanoldy = this;
+    
+    const tuchola = kanoldy.getAttribute('href')
+
+    const zalno = tuchola.replace('#tag-', '')
+    console.log(zalno)
+    
+  const adi = document.querySelectorAll('a.active[href^="#tag"]')
+  
+  for(let ad of adi){
+    ad.classList.remove('active')
+  }
+ 
+const mamaAdiego = document.querySelectorAll('a[href="' + tuchola +'" ]')
+ 
+  for(let golebie of mamaAdiego){
+    golebie.classList.add('active')
+  }
+ 
+elfDobryJakPomidor('[data-tags~="' + zalno + '"]');
+ }
+
+
+ function kebasa(){
+    const dwabulki = document.querySelectorAll('a[href^="#tag-"]')
+    for(let dw of dwabulki){
+      dw.addEventListener('click', tagClickHandler)
+  }
+ }
+kebasa()
