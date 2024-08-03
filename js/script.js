@@ -54,7 +54,7 @@ elfDobryJakPomidor();
 
 
 function gelolo(){
-  let tablica = []
+  let tablica = {}
     const allArt = document.querySelectorAll(optArticleSelector);
     const o = '.post-tags .list';
     for(let cfc of allArt){
@@ -68,20 +68,27 @@ function gelolo(){
         for(let tagOne of splitt){
             const linkHTML = '<li><a href="#tag-' + tagOne + '"><span>' + tagOne + '</span></a></li><br>';
           ggg = ggg + linkHTML
-          if(tablica.indexOf(linkHTML) == -1){
-            tablica.push(linkHTML)
-          }
+        
         console.log(ggg)
         tagss.innerHTML = ggg
-       // tagss.insertAdjacentHTML('afterbegin', ggg);
+        if(!tablica.hasOwnProperty(tagOne)){
+          tablica[tagOne] = 1;
+        }else {
+          tablica[tagOne]++
         }
-     
-       
-    } 
+       // tagss.insertAdjacentHTML('afterbegin', ggg);
+      }
+    }
     const tagListRight = document.querySelector(optTagsListSelector);
 
     /* [NEW] add html from allTags to tagList */
-    tagListRight.innerHTML = tablica.join(' ');
+   // tagListRight.innerHTML = tablica.join(' ');
+   let zupaZTrupa = '';
+
+   for(let j in tablica){
+    zupaZTrupa += '<li><a href="#tag-'+ j + '">' + j + '(' + tablica[j] + ')</a></li>'
+    tagListRight.innerHTML = zupaZTrupa
+    }
 }
 gelolo();
 
