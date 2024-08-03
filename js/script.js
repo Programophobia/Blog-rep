@@ -16,7 +16,7 @@ function argo (event){
    }
    const mateuszek = document.querySelector(href)
    mateuszek.classList.add('active')
-}
+} 
 
 
 
