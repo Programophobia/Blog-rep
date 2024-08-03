@@ -25,6 +25,7 @@ const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles';
   optArticleTagsSelector = '.post-tags .list';
+  optTagsListSelector = '.list.tags';
 
   function elfDobryJakPomidor(customSelector = ''){
     const j = document.querySelector(optTitleListSelector)
@@ -53,7 +54,7 @@ elfDobryJakPomidor();
 
 
 function gelolo(){
-  
+  let tablica = []
     const allArt = document.querySelectorAll(optArticleSelector);
     const o = '.post-tags .list';
     for(let cfc of allArt){
@@ -67,6 +68,9 @@ function gelolo(){
         for(let tagOne of splitt){
             const linkHTML = '<li><a href="#tag-' + tagOne + '"><span>' + tagOne + '</span></a></li><br>';
           ggg = ggg + linkHTML
+          if(tablica.indexOf(linkHTML) == -1){
+            tablica.push(linkHTML)
+          }
         console.log(ggg)
         tagss.innerHTML = ggg
        // tagss.insertAdjacentHTML('afterbegin', ggg);
@@ -74,6 +78,10 @@ function gelolo(){
      
        
     } 
+    const tagListRight = document.querySelector(optTagsListSelector);
+
+    /* [NEW] add html from allTags to tagList */
+    tagListRight.innerHTML = tablica.join(' ');
 }
 gelolo();
 
@@ -117,9 +125,9 @@ kebasa()
 
 function fia(){
   
-  const Rdahan = document.querySelectorAll(optArticleSelector);
+  const radhan = document.querySelectorAll(optArticleSelector);
 
- for(let malenia of Rdahan){
+ for(let malenia of radhan){
   const margit = malenia.querySelector('.post-author')
   const melina = malenia.getAttribute('data-author')
   const renala = '<a href="#author-'+ melina +'">By:  ' + melina + '</>'
