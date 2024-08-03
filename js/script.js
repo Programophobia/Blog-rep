@@ -68,8 +68,8 @@ function gelolo(){
             const linkHTML = '<li><a href="#tag-' + tagOne + '"><span>' + tagOne + '</span></a></li><br>';
           ggg = ggg + linkHTML
         console.log(ggg)
-       // tagss.innerHTML = ggg
-        tagss.insertAdjacentHTML('afterbegin', ggg);
+        tagss.innerHTML = ggg
+       // tagss.insertAdjacentHTML('afterbegin', ggg);
         }
      
        
