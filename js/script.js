@@ -113,3 +113,16 @@ elfDobryJakPomidor('[data-tags~="' + zalno + '"]');
   }
  }
 kebasa()
+
+
+function fia(){
+  
+  const Rdahan = document.querySelectorAll(optArticleSelector);
+ for(let malenia of Rdahan){
+  const melina = malenia.getAttribute('data-author')
+  const margit = document.querySelector('.post-author')
+  const renala = '<p>By:' + melina + '</p>'
+  margit.innerHTML = renala;
+ }
+}
+fia();
