@@ -122,8 +122,44 @@ function fia(){
  for(let malenia of Rdahan){
   const margit = malenia.querySelector('.post-author')
   const melina = malenia.getAttribute('data-author')
-  const renala = '<p>By:  ' + melina + '</p>'
+  const renala = '<a href="#author-'+ melina +'">By:  ' + melina + '</>'
   margit.innerHTML = renala;
  }
 }
 fia();
+
+
+function caelid(event){
+
+  event.preventDefault()
+
+    const kanoldy = this;
+    
+    const morg = kanoldy.getAttribute('href')
+
+    const mikela = morg.replace('#author-', '')
+    console.log(mikela)
+    
+  const dragons = document.querySelectorAll('a.active[href^="#author"]')
+  
+  for(let aeyzykiel of dragons){
+    aeyzykiel.classList.remove('active')
+  }
+ 
+const mamaA = document.querySelectorAll('a[href="' + mikela +'" ]')
+ 
+  for(let golebie of mamaA){
+    golebie.classList.add('active')
+  }
+ 
+elfDobryJakPomidor('[data-author~="' + mikela + '"]');
+ }
+
+
+ function cukier(){
+    const anka = document.querySelectorAll('a[href^="#author-"]')
+    for(let dww of anka){
+      dwwaddEventListener('click', caelid)
+  }
+ }
+ cukier()
