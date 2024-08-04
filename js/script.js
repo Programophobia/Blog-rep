@@ -2,6 +2,7 @@
 
 const moje = Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
 const zapiex = Handlebars.compile(document.querySelector('#lol').innerHTML)
+const ser = Handlebars.compile(document.querySelector('#kechuk').innerHTML)
 
 const lol = document.querySelectorAll('.post')
 
@@ -173,7 +174,9 @@ function mordy(){
     
     const x = mordex.getAttribute('data-author')
     console.log(x)
-    const wpisz = '<li><a href="#' +x+'"> '+ x +'</a></li>'
+    //const wpisz = '<li><a href="#' +x+'"> '+ x +'</a></li>'
+    const hhh = {b:x, a:x}
+    const wpisz = ser(hhh)
   wpis += wpisz
 
   }
