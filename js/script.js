@@ -168,7 +168,9 @@ function mordy(){
   wpis += wpisz
 
   }
+ 
   listaPajacuchow.innerHTML = wpis;
+
  }
 
  mordy()
