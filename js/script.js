@@ -203,3 +203,16 @@ elfDobryJakPomidor('[data-author="' + mikela + '"]');
   }
  }
  cukier()
+ const test = document.querySelector('.list').style.color = 'green'
+ function kolorkiZDupy(){
+    const zielen = document.querySelector('.tag-size-1')
+    const ziele = document.querySelector('.tag-size-2')
+    const ziel = document.querySelector('.tag-size-3')
+    const zie = document.querySelector('.tag-size-4')
+    const zi = document.querySelector('.tag-size-5')
+    const test = document.querySelector('.list')
+    zielen.style.color = "green";
+    ziel.style.color = "red"
+ }
+
+ kolorkiZDupy()
