@@ -1,6 +1,7 @@
 
 
 const moje = Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
+const zapiex = Handlebars.compile(document.querySelector('#lol').innerHTML)
 
 const lol = document.querySelectorAll('.post')
 
@@ -94,8 +95,11 @@ function gelolo(){
         const splitt = tagAtt.split(' ')
 
         for(let tagOne of splitt){
-            const linkHTML = '<li><a href="#tag-' + tagOne + '"><span>' + tagOne + '</span></a></li><br>';
-          ggg = ggg + linkHTML
+           // const linkHTML = '<li><a href="#tag-' + tagOne + '"><span>' + tagOne + '</span></a></li><br>';
+
+          const linkHTML = {gg: tagOne ,lolzon: tagOne}
+          const k = zapiex(linkHTML)
+          ggg = ggg + k
         
         console.log(ggg)
         tagss.innerHTML = ggg
