@@ -26,6 +26,8 @@ const optArticleSelector = '.post',
   optTitleListSelector = '.titles';
   optArticleTagsSelector = '.post-tags .list';
   optTagsListSelector = '.list.tags';
+  optCloudClassCount = 5,
+  optCloudClassPrefix = 'tag-size-';
 
   function elfDobryJakPomidor(customSelector = ''){
     const j = document.querySelector(optTitleListSelector)
@@ -53,7 +55,7 @@ const optArticleSelector = '.post',
 elfDobryJakPomidor();
 
 function kebab(tags){
-  const sos = {max:999, min:0}
+  const sos = {max:0, min:999}
   for(let tortilla in tags){
     if(tags[tortilla] > sos.max){
       sos.max = tags[tortilla]
@@ -63,6 +65,15 @@ function kebab(tags){
     }
   }
   return sos
+}
+
+function klasyPostaci (wojownik, mag){
+  const serBałkański = wojownik - mag.min;
+  const sałata = mag.max - mag.min;
+  const spell = serBałkański/sałata
+  const lolzon = Match.floor(spell * (optCloudClassCount - 1) +1)
+  return optCloudClassPrefix + lolzon
+
 }
 
 function gelolo(){
