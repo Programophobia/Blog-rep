@@ -52,6 +52,18 @@ const optArticleSelector = '.post',
 
 elfDobryJakPomidor();
 
+function kebab(tags){
+  const sos = {max:999, min:0}
+  for(let tortilla in tags){
+    if(tags[tortilla] > sos.max){
+      sos.max = tags[tortilla]
+    }
+    if(tags[tortilla] < sos.min){
+      sos.min = tags[tortilla]
+    }
+  }
+  return sos
+}
 
 function gelolo(){
   let tablica = {}
@@ -83,6 +95,8 @@ function gelolo(){
 
     /* [NEW] add html from allTags to tagList */
    // tagListRight.innerHTML = tablica.join(' ');
+   const hello = kebab(tablica)
+
    let zupaZTrupa = '';
 
    for(let j in tablica){
