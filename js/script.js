@@ -1,4 +1,7 @@
 
+
+const moje = Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
+
 const lol = document.querySelectorAll('.post')
 
 function argo (event){
@@ -41,7 +44,9 @@ const optArticleSelector = '.post',
       const kek = a.getAttribute('id')
   
       const tilt = a.querySelector(optTitleSelector).innerHTML
-      const insert = '<li><a href="#' + kek + '"><span>' + tilt + '</span></a></li>';
+     // const insert = '<li><a href="#' + kek + '"><span>' + tilt + '</span></a></li>';
+     const linkHTMLData = {id: kek, title: tilt};
+     const insert = moje(linkHTMLData);
       h += insert
     }
 
