@@ -71,7 +71,7 @@ function klasyPostaci (wojownik, mag){
   const serBałkański = wojownik - mag.min;
   const sałata = mag.max - mag.min;
   const spell = serBałkański/sałata
-  const lolzon = Match.floor(spell * (optCloudClassCount - 1) +1)
+  const lolzon = Math.floor(spell * (optCloudClassCount - 1) +1)
   return optCloudClassPrefix + lolzon
 
 }
@@ -111,7 +111,7 @@ function gelolo(){
    let zupaZTrupa = '';
 
    for(let j in tablica){
-    zupaZTrupa += '<li><a href="#tag-'+ j + '">' + j + '(' + tablica[j] + ')</a></li>'
+    zupaZTrupa += '<li><a href="#tag-'+ j + '" class=" '+ klasyPostaci(tablica[j], hello) + ' ">' + j + '(' + tablica[j] + ')</a></li>'
     tagListRight.innerHTML = zupaZTrupa
     }
 }
