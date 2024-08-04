@@ -3,7 +3,7 @@
 const moje = Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
 const zapiex = Handlebars.compile(document.querySelector('#lol').innerHTML)
 const ser = Handlebars.compile(document.querySelector('#kechuk').innerHTML)
-
+const dieta = Handlebars.compile(document.querySelector('#t').innerHTML)
 const lol = document.querySelectorAll('.post')
 
 function argo (event){
@@ -118,12 +118,20 @@ function gelolo(){
    // tagListRight.innerHTML = tablica.join(' ');
    const hello = kebab(tablica)
 
-   let zupaZTrupa = '';
+   let zupaZTrupa = {tags:[]}
 
    for(let j in tablica){
-    zupaZTrupa += '<li><a href="#tag-'+ j + '" class=" '+ klasyPostaci(tablica[j], hello) + ' ">' + j + '(' + tablica[j] + ')</a></li>'
-    tagListRight.innerHTML = zupaZTrupa
+   
+   
+ //const s = '<li><a href="#tag-'+ j + '" class=" '+ klasyPostaci(tablica[j], hello) + ' ">' + j + '(' + tablica[j] + ')</a></li>'
+    zupaZTrupa.tags.push({
+      c:j,
+      wojownik: tablica[j],
+      kk: klasyPostaci(tablica[j], hello)
+    })
+
     }
+    tagListRight.innerHTML = dieta(zupaZTrupa)
 }
 gelolo();
 
