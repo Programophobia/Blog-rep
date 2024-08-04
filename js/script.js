@@ -155,6 +155,25 @@ elfDobryJakPomidor('[data-tags~="' + zalno + '"]');
 kebasa()
 
 
+function mordy(){
+  const pi = []
+  const morda = document.querySelectorAll(optArticleSelector)
+  const listaPajacuchow = document.querySelector('.list.authors')
+  let wpis = ''
+  for(let mordex of morda){
+    
+    const x = mordex.getAttribute('data-author')
+    console.log(x)
+    const wpisz = '<li><a href="#' +x+'"> '+ x +'</a></li>'
+  wpis += wpisz
+
+  }
+  listaPajacuchow.innerHTML = wpis;
+ }
+
+ mordy()
+
+
 function fia(){
   
   const radhan = document.querySelectorAll(optArticleSelector);
@@ -216,3 +235,4 @@ elfDobryJakPomidor('[data-author="' + mikela + '"]');
  }
 
  kolorkiZDupy()
+
