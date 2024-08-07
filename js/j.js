@@ -28,14 +28,19 @@ const h = document.querySelectorAll('.list a')
 
 
 function hamburger(){
-    const linkMiejsce = document.querySelector('.list.titles')
+    const linkMiejsce = document.querySelector('.titles')
     const allArts = document.querySelectorAll('.posts-title')
-    linkMiejsce.innerHTML = ''
+    let htm = ''
+    
     for(let vvv of allArts){
-        const meow = vvv.innerHTML
+        const tatt = vvv.getAttribute('id')
+        const meow = vvv.querySelector('.post-titles').innerHTML
         console.log(meow)
+        const put = '<li><a href="#' + tatt + '"><span>' + vvv + '</span></a></li>';
+htm +=put
 
     }
+    linkMiejsce.innerHTML = htm
 }
 
 hamburger()
