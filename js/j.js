@@ -51,3 +51,33 @@ for(let g of h){
 
 
 
+
+function ooo () {
+ /* find all articles */
+ const alA = document.querySelectorAll('.&&')
+  /* START LOOP: for every article: */
+  for (let g of alA){
+    tagw = g.querySelector('&&')
+  
+    /* find tags wrapper */
+    
+    /* make html variable with empty string */
+    let gf = ''
+    /* get tags from data-tags attribute */
+    const tags = r.getAttribute('data-tags')
+    const split = tags.slice(' ')
+    /* split tags into array */
+    /* START LOOP: for each tag */
+for(let n of split){
+    const ht = '<>'
+gf +=ht
+}
+      /* generate HTML of the link */
+      /* add generated code to html variable */
+    /* END 
+    LOOP: for each tag */
+tagw.innerHTML = gf
+    /* insert HTML of all the links into the tags wrapper */
+  /* END LOOP: for every article: */
+  }
+}
