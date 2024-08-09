@@ -52,16 +52,16 @@ for(let g of h){
 
 
 
-function ooo (customV) {
+function ooo (customV = '') {
  
- const alA = document.querySelectorAll('.&&')
+ const alA = document.querySelectorAll('.&&' + customV)
  
   for (let g of alA){
     tagw = g.querySelector('&&')
   
     let gf = ''
 
-    const tags = r.getAttribute('data-tags' + customV)
+    const tags = r.getAttribute('data-tags' )
     const split = tags.slice(' ')
  
 for(let n of split){
