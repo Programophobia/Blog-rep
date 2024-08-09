@@ -72,3 +72,37 @@ gf +=ht
 tagw.innerHTML = gf
    
 }
+
+function sniadanie(event){
+    event.prevent.Default()
+    
+  const cl = this;
+ 
+  const hey = sl.getAttribute('href')
+   
+  const maluch = hey.replace('tag-', '')
+const all = document.querySelectorAll('.dsdsd.active')
+    
+     for(let g of all){
+        g.classList.remove('active')
+     }
+
+const bb = document.querySelectorAll('a[href="'+bb+'"]')
+  
+  for(let cc of bb){
+    cc.classList.add("active")
+  }
+  
+ooo('[data-tags~= "'+maluch+'"]')
+ }
+
+
+ function kawa(){
+ 
+  const vv = document.querySelectorAll('a[href^="#tag-"]')  
+  for(let r of vv){
+    r.addEventListener('click', sniadanie)
+  }
+   
+ }
+kawa();
