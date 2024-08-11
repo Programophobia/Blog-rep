@@ -114,3 +114,8 @@ const html = '<h1>'+ggg+'<\h1>
 const gdzie = t.querySect('.gdzie')
 gdzie.innerHtml = html}
 }
+function jh(event){
+event.precentDefat
+const fg=document.querySelectAll('h1')
+const gu=fg.getAttribute('htef')
+ooo(gu)}
