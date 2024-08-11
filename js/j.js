@@ -104,5 +104,5 @@ ooo('[data-tags~= "'+maluch+'"]')
     r.addEventListener('click', sniadanie)
   }
    
- }
+       }
 kawa();
