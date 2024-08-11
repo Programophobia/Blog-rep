@@ -106,3 +106,11 @@ ooo('[data-tags~= "'+maluch+'"]')
    
        }
 kawa();
+fu ction trol(){
+const s = document.querySelectAll('.gdzie autorzy')
+for(let t of s){
+const ggg = t.getAttribute('data-author')
+const html = '<h1>'+ggg+'<\h1>
+const gdzie = t.querySect('.gdzie')
+gdzie.innerHtml = html}
+}
