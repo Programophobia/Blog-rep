@@ -147,6 +147,7 @@ function generateTags(){
   /* END LOOP: for each active tag link */
   /* find all tag links with "href" attribute equal to the "href" 
 constant */
+const all = document.querySelectorAll('a.active[htrf="'+href+'"]')
   /* START LOOP: for each found tag link */
     /* add class active */
   /* END LOOP: for each found tag link */
