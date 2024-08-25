@@ -94,7 +94,7 @@ function generateTags(){
         const arr = att.split(' ')
         console.log(arr)
         for(let b of arr){
-            const v = '<li><a href="#'+b+'"> '+b+' </a><br></li>'
+            const v = '<li><a href="#'+b+'"> '+b+' </a></li><br>'
             gt+=v
 
         }
