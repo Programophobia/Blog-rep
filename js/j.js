@@ -111,7 +111,7 @@ function generateTags(){
     /* find all articles */
     const allA = document.querySelectorAll('.')
     
-    for(let g of all){
+    for(let g of allA){
         const wrapper = document.querySelector('.')
         let h =''
     }
