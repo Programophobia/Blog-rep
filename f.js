@@ -15,12 +15,19 @@ function a(){
 
 a()
 
+const ale = document.querySelectorAll('.o')
 
 function click(){
 console.log('clicked')
+const clicked = this
+
+for(let a of ale){
+    a.classList.removed('.active')
+}
+clicked.classList.add('.active')
 }
 
-const ale = document.querySelectorAll('.o')
-for(let g of o){
+
+for(let g of ale){
     g.addEventListener('click', click)
 }
