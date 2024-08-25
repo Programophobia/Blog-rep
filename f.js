@@ -21,10 +21,18 @@ function click(){
 console.log('clicked')
 const clicked = this
 
+
 for(let a of ale){
     a.classList.removed('.active')
 }
 clicked.classList.add('.active')
+for(let g of gg){
+    g.classList.remove('.active')
+
+}
+const href = clicked.getAttribute('href')
+const ladny = href.replace('#-', '')
+document.article.querySelector(ladny).classList.add('.active')
 }
 
 
