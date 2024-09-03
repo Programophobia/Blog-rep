@@ -41,14 +41,14 @@ const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles';
 
-function generateTitleLinks(){
+function generateTitleLinks(customSelector =''){
 
   /* remove contents of titleList */
   const titleList = document.querySelector(optTitleListSelector);
   titleList.innerHTML = '';
 
   /* for each article */
-  const articles = document.querySelectorAll(optArticleSelector);
+  const articles = document.querySelectorAll(optArticleSelector + customSelector );
 
   let html = '';
 
@@ -127,6 +127,7 @@ function tagClickHandler(event){
   /* END LOOP: for each active tag link */
   /* find all tag links with "href" attribute equal to the "href" 
 constant */
+
   /* START LOOP: for each found tag link */
     /* add class active */
   /* END LOOP: for each found tag link */
