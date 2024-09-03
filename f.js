@@ -94,7 +94,7 @@ function generateTags(){
         const arr = att.split(' ')
         console.log(arr)
         for(let b of arr){
-            const v = '<li><a class="g" href="#'+b+'"> '+b+' </a></li><br>'
+            const v = '<li><a class="g" href="#tag-'+b+'"> '+b+' </a></li><br>'
             gt+=v
 
         }
@@ -152,3 +152,4 @@ generateTitleLinks('[data-tags~="' + tag + '"]');
   /* END LOOP: for each link */
  }
  addClickListenersToTags();
+
