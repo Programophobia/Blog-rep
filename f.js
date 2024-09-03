@@ -153,3 +153,8 @@ generateTitleLinks('[data-tags~="' + tag + '"]');
  }
  addClickListenersToTags();
 
+
+ function pierdolnik() {
+  //wszystkie wrapery
+  const getAlllo = document.querySelectorAll('.post-title')
+ }
