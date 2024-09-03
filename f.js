@@ -156,5 +156,14 @@ generateTitleLinks('[data-tags~="' + tag + '"]');
 
  function pierdolnik() {
   //wszystkie wrapery
-  const getAlllo = document.querySelectorAll('.post-title')
+  const getAlllo = document.querySelectorAll('.post')
+  for(let hh of getAlllo){
+    const odczyt = hh.getAttribute('data-author')
+    const wrapper = hh.querySelector('.post-title')
+    let wpis = ''
+    const nowe = '<li><a class="g" href="#tag-'+odczyt+'"> '+odczyt+' </a></li><br>'
+    wrapper.innerHTML = nowe
+  }
  }
+
+ pierdolnik()
