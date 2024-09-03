@@ -142,10 +142,11 @@ generateTitleLinks('[data-tags~="' + tag + '"]');
  }
  function addClickListenersToTags(){
   /* find all links to tags */
-  const alllolo = document.querySelectorAll('a[data-tags="' + tag + '"]')
+  const alllolo = document.querySelectorAll('a[href^="#tag-"]')
   /* START LOOP: for each link */
   for(let ffff of alllolo){
     ffff.addEventListener('click', tagClickHandler)
+    console.log('ffffff')
   }
     /* add tagClickHandler as event listener for that link */
   /* END LOOP: for each link */
