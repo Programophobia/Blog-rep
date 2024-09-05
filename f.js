@@ -81,6 +81,20 @@ function generateTitleLinks(customSelector = ''){
 
 generateTitleLinks();
 
+function jajecznica(tags){
+  const params = {}
+ tags.max = 0
+ tags.min=99
+  for(let tag of tags){
+    if(tags[tag] > params.max){
+      params.max = tags[tag]
+    }
+    if(tags[tag] < params.min){
+      params.min = tags[tag]
+    }
+  }
+
+}
 
 function generateTags(){
  
