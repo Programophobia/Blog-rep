@@ -97,17 +97,23 @@ function generateTags(){
             const v = '<li><a class="g" href="#tag-'+b+'"> '+b+' </a></li><br>'
             gt+=v
             
-      if(!allTags == -1){
+      if(!allTags.hasOwnProperty(tag)){
         /* [NEW] add generated code to allTags array */
-        allTags.push(linkHTML);
+        allTags[tag] = 1
+      }
+      else{
+        allTags[tag ++]
       }
 
         }
         wrap.innerHTML = gt
     }
-    const tagList = document.querySelector(optTagsListSelector);
-    /* [NEW] add html from allTags to tagList */
-    tagList.innerHTML = allTags.join(' ')
+
+    const fooo = jajecznica(allTags)
+    const zjeba = ''
+
+    zjeba =+ tag + '('+allTags[tag]+')'
+    wraper.innerHTML = zjeba
  
 }
 generateTags(); 
