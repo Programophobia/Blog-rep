@@ -85,7 +85,7 @@ generateTitleLinks();
 function generateTags(){
  
     const allA = document.querySelectorAll('.post')
-    let allTags = [];
+    let allTags = {};
     for(let g of allA){
         const wrap = g.querySelector('.list')
         let gt = ''
@@ -97,7 +97,7 @@ function generateTags(){
             const v = '<li><a class="g" href="#tag-'+b+'"> '+b+' </a></li><br>'
             gt+=v
             
-      if(allTags.indexOf(linkHTML) == -1){
+      if(!allTags == -1){
         /* [NEW] add generated code to allTags array */
         allTags.push(linkHTML);
       }
@@ -110,7 +110,7 @@ function generateTags(){
     tagList.innerHTML = allTags.join(' ')
  
 }
-generateTagsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss(); 
+generateTags(); 
 
 function tagClickHandler(event){
     /* prevent default action for this event */
@@ -176,7 +176,7 @@ generateTitleLinks('[data-tags~="' + tag + '"]');
  pierdolnik()
 
 
- function generateTags(){
+ function generateTagsddddddddddddd(){
   /* [NEW] create a new variable allTags with an empty array */
   let allTags = [];
   /* find all articles */
@@ -206,3 +206,5 @@ generateTitleLinks('[data-tags~="' + tag + '"]');
   /* [NEW] add html from allTags to tagList */
   tagList.innerHTML = allTags.join(' ')
     }
+
+
