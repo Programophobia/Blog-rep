@@ -95,7 +95,10 @@ function jajecznica(tags){
   }
 
 }
+function liczymu(){
 
+}
+liczymu()
 function generateTags(){
  
     const allA = document.querySelectorAll('.post')
