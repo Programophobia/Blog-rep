@@ -110,7 +110,7 @@ function generateTags(){
     tagList.innerHTML = allTags.join(' ')
  
 }
-generateTags(); 
+generateTagsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss(); 
 
 function tagClickHandler(event){
     /* prevent default action for this event */
