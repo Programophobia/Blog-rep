@@ -79,7 +79,7 @@ function generateTitleLinks(customSelector = ''){
   }
 }
 
-generateTitleLinks();
+generateTitleLinks(); 
 
 function jajecznica(tags){
   const params = {}
