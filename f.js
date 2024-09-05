@@ -85,7 +85,7 @@ generateTitleLinks();
 function generateTags(){
  
     const allA = document.querySelectorAll('.post')
-  
+    let allTags = [];
     for(let g of allA){
         const wrap = g.querySelector('.list')
         let gt = ''
@@ -96,11 +96,18 @@ function generateTags(){
         for(let b of arr){
             const v = '<li><a class="g" href="#tag-'+b+'"> '+b+' </a></li><br>'
             gt+=v
+            
+      if(allTags.indexOf(linkHTML) == -1){
+        /* [NEW] add generated code to allTags array */
+        allTags.push(linkHTML);
+      }
 
         }
         wrap.innerHTML = gt
     }
-
+    const tagList = document.querySelector(optTagsListSelector);
+    /* [NEW] add html from allTags to tagList */
+    tagList.innerHTML = allTags.join(' ')
  
 }
 generateTags(); 
@@ -173,7 +180,11 @@ generateTitleLinks('[data-tags~="' + tag + '"]');
   /* [NEW] create a new variable allTags with an empty array */
   let allTags = [];
   /* find all articles */
+  const allArt = document.querySelectorAll('.post')
   /* START LOOP: for every article: */
+  for(let gf of allArt){
+    const cd = gf.querySelector('.')
+  }
     /* find tags wrapper */
     /* make html variable with empty string */
     /* get tags from data-tags attribute */
