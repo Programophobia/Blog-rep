@@ -1,4 +1,4 @@
-'use strict';
+ 'use strict';
 
 function titleClickHandler(event){
   console.log('Link was clicked!');
