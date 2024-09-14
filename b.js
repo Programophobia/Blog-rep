@@ -79,3 +79,4 @@ function titleClickHandler(event){
   for(let link of links){
     link.addEventListener('click', titleClickHandler);
   }
+
