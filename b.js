@@ -151,7 +151,7 @@ function tagClickHandler(event){
   }
   /* find all tag links with "href" attribute equal to the "href" constant */
   const hrefTags = document.querySelectorAll('a[href="' + href + '"]'); //nie rozumiem tego
-  console.log(hrefTags);
+  console.log(hrefTags, href);
 
   /* START LOOP: for each found tag link */
   for (let hrefTag of hrefTags) {
@@ -192,4 +192,25 @@ where.innerHTML = linkHTML
 }
 addAuthors()
 
+function p(){
+const clicked = this
+  const author = clicked.getAttribute('href')
+  const au = author.replace('#author-', '')
+  const mal = document.querySelectorAll('a.active[href^="#author-"]')
+  for(let vv of mal){
+    vv.classList.remove('active')
+  }
+  clicked.classList.add('active')
+  
+  generateTitleLinks('[data-author="'+au+'"]')
+}
+
+
+function j(){
+  const allAutho = document.querySelectorAll('a[href^="#author-"]')
+for(let gk of allAutho){
+gk.addEventListener('click', p)
+}
+}
+j()
 
