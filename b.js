@@ -180,5 +180,14 @@ function addClickListenersToTags(){
 addClickListenersToTags();
 
 function addAuthors(){
-  
+  const allAr = document.querySelectorAll('.post')
+  let html = ''
+  for(let a of allAr){
+    const t = a.getAttribute('data-author')
+    console.log(t)
+const where = a.querySelector('.post-author')
+where.innerHTML = t
+  }
 }
+addAuthors()
+
