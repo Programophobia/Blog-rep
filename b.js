@@ -92,11 +92,11 @@ let html =''
       const tablyca = att.split(' ')
       console.log(tablyca)
       for(let v of tablyca){
-        const bar = '<li><a href="#">'+v+'</a></li><br>'
+        const bar = '<li><a class="domina" href="#">'+v+'</a></li><br>'
         html+=bar
-        wrapper.innerHTML = html;
+      
       }
-
+      wrapper.innerHTML = html;
     }
       /* find tags wrapper */
     /* make html variable with empty string */
@@ -110,3 +110,13 @@ let html =''
   /* END LOOP: for every article: */
  }
  generateTags();
+
+const tagi = document.querySelectorAll('.domina')
+for(let d of tagi){
+  d.addEventListener('click', ff);
+ 
+}
+
+function ff(){
+  console.log('jade')
+}
