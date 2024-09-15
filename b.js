@@ -178,3 +178,7 @@ function addClickListenersToTags(){
   }
 }
 addClickListenersToTags();
+
+function addAuthors(){
+  
+}
