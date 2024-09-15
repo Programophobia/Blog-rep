@@ -185,9 +185,11 @@ function addAuthors(){
   for(let a of allAr){
     const t = a.getAttribute('data-author')
     console.log(t)
+    const linkHTML = '<li><a href="#author-' + t + '"><span>' + t + '</span></a></li><br>';
 const where = a.querySelector('.post-author')
-where.innerHTML = t
+where.innerHTML = linkHTML
   }
 }
 addAuthors()
+
 
