@@ -62,10 +62,10 @@ function titleClickHandler(event){
   
     /* get 'href' attribute from the clicked link */
     const articleSelector = clickedElement.getAttribute("href");
-  
-  
+  console.log(articleSelector)
+  const y = articleSelector.replace('#', '')
     /* find the correct article using the selector (value of 'href' attribute) */
-    const targetArticle = document.querySelector(articleSelector);
+    const targetArticle = document.getElementById(y);
   
   
     /* add class 'active' to the correct article */
@@ -80,3 +80,33 @@ function titleClickHandler(event){
     link.addEventListener('click', titleClickHandler);
   }
 
+  function generateTags(){
+    /* find all articles */
+const allA = document.querySelectorAll(optArticleSelector)
+let html =''
+    /* START LOOP: for every article: */
+    for(let g of allA){
+      const wrapper= g.querySelector('.list-horizontal')
+      const att = g.getAttribute('data-tags')
+      console.log(att)
+      const tablyca = att.split(' ')
+      console.log(tablyca)
+      for(let v of tablyca){
+        const bar = '<li><a href="#">'+v+'</a></li><br>'
+        html+=bar
+        wrapper.innerHTML = html;
+      }
+
+    }
+      /* find tags wrapper */
+    /* make html variable with empty string */
+    /* get tags from data-tags attribute */
+    /* split tags into array */
+    /* START LOOP: for each tag */
+      /* generate HTML of the link */
+      /* add generated code to html variable */
+    /* END LOOP: for each tag */
+    /* insert HTML of all the links into the tags wrapper */
+  /* END LOOP: for every article: */
+ }
+ generateTags();
