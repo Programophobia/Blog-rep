@@ -85,7 +85,7 @@ generateTitleLinks();
 
 function generateTags(){
   /* find all articles */
-  let allTags = [];
+  let allTags = {};
   const articles = document.querySelectorAll(optArticleSelector);
 
   /* START LOOP: for every article: */
@@ -117,8 +117,11 @@ function generateTags(){
       /* add generated code to html variable */
       //html = html + linkHTML;
       tagList.insertAdjacentHTML('afterbegin', linkHTML);
-      if(allTags.indexOf(linkHTML) == -1){
-allTags.push(linkHTML)
+      if(!allTags.hasOwnProperty[tag]){
+allTags[tag] = 1
+      }
+      else{
+        allTags[tag]++
       }
     }
     /* insert HTML of all the links into the tags wrapper */
@@ -129,9 +132,12 @@ allTags.push(linkHTML)
 
   const tagList = document.querySelector('.list.tags');
   /* [NEW] add html from allTags to tagList */
-  tagList.innerHTML = allTags.join(' ');
+ // tagList.innerHTML = allTags.join(' ');
+ 
 }
 generateTags();
+
+
 
 function tagClickHandler(event){
   /* prevent default action for this event */ //Why?
