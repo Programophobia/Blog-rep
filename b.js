@@ -133,7 +133,11 @@ allTags[tag] = 1
   const tagList = document.querySelector('.list.tags');
   /* [NEW] add html from allTags to tagList */
  // tagList.innerHTML = allTags.join(' ');
- 
+ let h =''
+ for(let tag in allTags){
+  h += tag + '('+allTags[tag]+')'
+ }
+ tagList.innerHTML = h
 }
 generateTags();
 
