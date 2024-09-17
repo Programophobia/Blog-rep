@@ -117,11 +117,11 @@ function generateTags(){
       /* add generated code to html variable */
       //html = html + linkHTML;
       tagList.insertAdjacentHTML('afterbegin', linkHTML);
-      if(!allTags.hasOwnProperty[tag]){
-allTags[tag] = 1
+      if(!allTags.hasOwnProperty[linkHTML]){
+allTags[linkHTML] = 1
       }
       else{
-        allTags[tag]++
+        allTags[linkHTML]++
       }
     }
     /* insert HTML of all the links into the tags wrapper */
