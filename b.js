@@ -82,20 +82,22 @@ function generateTitleLinks(customSelector = ''){
 }
 generateTitleLinks();
 
-function calculateTagsParams(tags){
-  const params = {max:0, min:99999}
-  for(let tag of tags){
-    if(tags[tag] < params[max]){
-      params.min = tags[tag]
+function calculateTagsParams(tags) {
+  const params = {max:0, min:9999999};
+  for(let tag in tags) {
+    console.log(tag + ' is used ' + tags[tag] + ' times');
+    if(tags[tag] > params.max) {
+      params.max = tags[tag];
     }
-    if(tags[tag] > params[max] ){
-      params.max = tags[tag]
+    if(tags[tag] < params.min) {
+      params.min = tags[tag];
     }
   }
-  return params
+  return params;
 }
 
-
+const optCloudClassCount = 5;
+const optCloudClassPrefix = 'tag-size-';
 
 function generateTags(){
   /* find all articles */
