@@ -80,12 +80,19 @@ function generateTitleLinks(customSelector = ''){
     link.addEventListener('click', titleClickHandler);
   }
 }
-generateTitleLinks(parametry);
+generateTitleLinks();
 
-function calculateTagsParams(parametry){
-  const parmetry = {max:0, min:99999}
-if(params)
-
+function calculateTagsParams(tags){
+  const params = {max:0, min:99999}
+  for(let tag of tags){
+    if(tags[tag] < params[max]){
+      params.min = tags[tag]
+    }
+    if(tags[tag] > params[max] ){
+      params.max = tags[tag]
+    }
+  }
+  return params
 }
 
 
