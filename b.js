@@ -99,6 +99,14 @@ function calculateTagsParams(tags) {
 const optCloudClassCount = 5;
 const optCloudClassPrefix = 'tag-size-';
 
+function klasalol(x, y){
+const t = x-y.min
+const c = y.max-y.min
+const per = t/c
+const classs = Math.floor(per*(optCloudClassCount-1)+1)
+return optCloudClassPrefix + classs
+}
+
 function generateTags(){
   /* find all articles */
   let allTags = {};
