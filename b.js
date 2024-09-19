@@ -135,7 +135,7 @@ const tagsParams = calculateTagsParams(allTags)
       console.log(tag);
 
       /* generate HTML of the link */
-      const linkHTML = '<li><a href="#tag-' + tag + '"><span>' + tag + '</span></a></li><br>';
+      const linkHTML = '<li><a href="#tag-' + tag + '" class=" '+ klasalol(allTags[tag], tagsParams)+' "><span>' + tag + '</span></a></li><br>';
       console.log(linkHTML);
 
       /* add generated code to html variable */
